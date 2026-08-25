@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goes Pedras e Areia — Naviraí/MS | Areia, pedra e madeira</title>
+<meta name="description" content="Areia, pedra, madeira, tábuas e caixaria em Naviraí/MS. Entrega na cidade e região. Av. Amambai, 815 (fundos), Centro. WhatsApp (67) 99924-5253.">
+<meta property="og:title" content="Goes Pedras e Areia — Naviraí/MS">
+<meta property="og:description" content="Areia, pedra, madeira e material de construção com entrega em Naviraí e região.">
+<meta property="og:type" content="website">
+<link rel="icon" href="logo.jpeg">
+<style>
+  :root{
+    --laranja:#E8722A;      /* o laranja do adesivo */
+    --laranja-escuro:#C25A17;
+    --preto:#141210;
+    --grafite:#2C2825;
+    --areia:#F6F1E8;        /* fundo, cor de areia lavada */
+    --areia-escura:#E5DACA;
+    --texto:#241F1B;
+    --texto-suave:#6B6055;
+    --branco:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--areia);color:var(--texto);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    line-height:1.6;-webkit-text-size-adjust:100%;
+  }
+  .miolo{max-width:1080px;margin:0 auto;padding:0 20px}
+
+  /* ---------- topo ---------- */
+  header{background:var(--preto);color:var(--branco);padding:12px 0;position:sticky;top:0;z-index:10}
+  header .miolo{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  header img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:0 0 auto}
+  header .marca{font-weight:800;font-size:1.1rem;letter-spacing:.4px;flex:1;min-width:120px}
+  header .marca span{color:var(--laranja)}
+  .btn-topo{
+    text-decoration:none;font-weight:800;padding:9px 15px;border-radius:999px;
+    font-size:.9rem;white-space:nowrap;
+  }
+  .btn-topo.zap{background:#25D366;color:#0B2E14}
+  .btn-topo.equipe{background:transparent;color:var(--branco);border:2px solid var(--laranja)}
+
+  /* ---------- capa ---------- */
+  .capa{
+    background:linear-gradient(180deg,#1B1815,#2C2825);
+    color:var(--branco);padding:60px 0 52px;text-align:center;
+  }
+  .capa img{width:150px;height:150px;border-radius:50%;object-fit:cover;
+    border:5px solid var(--laranja);margin-bottom:20px}
+  .capa h1{font-size:clamp(1.9rem,5.5vw,3rem);margin:0 0 10px;line-height:1.15;text-wrap:balance}
+  .capa h1 em{color:var(--laranja);font-style:normal}
+  .capa p{font-size:clamp(1rem,2.6vw,1.2rem);color:#E8E0D6;max-width:36rem;margin:0 auto 26px}
+  .botoes{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .botao{
+    display:inline-block;text-decoration:none;font-weight:800;font-size:1.05rem;
+    padding:15px 26px;border-radius:12px;
+  }
+  .botao.zap{background:#25D366;color:#0B2E14}
+  .botao.fone{background:transparent;color:var(--branco);border:2px solid var(--laranja)}
+
+  /* ---------- faixa ---------- */
+  .faixa{background:var(--laranja);color:#241000}
+  .faixa .miolo{display:flex;gap:10px;justify-content:space-around;flex-wrap:wrap;
+    padding:16px 20px;font-weight:800;text-align:center;font-size:.98rem}
+
+  /* ---------- seções ---------- */
+  section{padding:52px 0}
+  h2{font-size:clamp(1.5rem,4vw,2rem);margin:0 0 6px;color:var(--preto);text-wrap:balance}
+  .sub{color:var(--texto-suave);margin:0 0 28px;font-size:1.05rem}
+
+  .grade{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .card{background:var(--branco);border:1px solid var(--areia-escura);border-radius:14px;
+    padding:20px;border-top:5px solid var(--laranja)}
+  .card h3{margin:0 0 10px;font-size:1.2rem;color:var(--preto)}
+  .card ul{margin:0;padding-left:20px;color:var(--texto-suave)}
+  .card li{margin-bottom:5px}
+
+  /* ---------- onde estamos ---------- */
+  .local{background:var(--branco);border-top:1px solid var(--areia-escura)}
+  .local .colunas{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));align-items:start}
+  .dado{margin-bottom:18px}
+  .dado b{display:block;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--laranja-escuro);margin-bottom:2px}
+  .dado a{color:var(--texto);text-decoration:none;border-bottom:2px solid var(--areia-escura)}
+
+  /* ---------- acesso da equipe ---------- */
+  .equipe{background:var(--grafite);color:var(--branco);text-align:center}
+  .equipe h2{color:var(--branco)}
+  .equipe p{color:#C9BFB4;max-width:34rem;margin:0 auto 22px}
+  .botao.painel{background:var(--laranja);color:#241000}
+
+  /* ---------- rodapé ---------- */
+  footer{background:var(--preto);color:#B9AFA4;padding:30px 0;font-size:.9rem}
+  footer .miolo{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  footer a{color:#B9AFA4}
+
+  .zap-flutua{
+    position:fixed;right:16px;bottom:16px;background:#25D366;color:#0B2E14;
+    width:60px;height:60px;border-radius:50%;display:flex;align-items:center;
+    justify-content:center;font-size:1.9rem;text-decoration:none;
+    box-shadow:0 6px 18px rgba(0,0,0,.28);z-index:20
+  }
+  @media(min-width:820px){.zap-flutua{display:none}}
+  @media(max-width:560px){.btn-topo.zap{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="miolo">
+    <img src="logo.jpeg" alt="Goes Pedras e Areia">
+    <div class="marca">GOES <span>Pedras e Areia</span></div>
+    <a class="btn-topo zap" href="https://wa.me/5567999245253">WhatsApp</a>
+    <a class="btn-topo equipe" href="painel/">Entrar no sistema</a>
+  </div>
+</header>
+
+<div class="capa">
+  <div class="miolo">
+    <img src="logo.jpeg" alt="Logo Goes Pedras e Areia">
+    <h1>Areia, pedra e madeira<br>em <em>Naviraí</em> e região</h1>
+    <p>Material de construção com entrega na cidade. Areia lavada, pedra britada,
+       madeira dura, tábuas e caixaria de pinus — direto do nosso pátio pra tua obra.</p>
+    <div class="botoes">
+      <a class="botao zap" href="https://wa.me/5567999245253?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento.">Pedir orçamento no WhatsApp</a>
+      <a class="botao fone" href="tel:+5567999245253">(67) 99924-5253</a>
+    </div>
+  </div>
+</div>
+
+<div class="faixa">
+  <div class="miolo">
+    <div>Entrega em Naviraí</div>
+    <div>Carga fechada ou fracionada</div>
+    <div>Atendimento pelo WhatsApp</div>
+  </div>
+</div>
+
+<section>
+  <div class="miolo">
+    <h2>O que vendemos</h2>
+    <p class="sub">Tudo que sai do pátio, do metro cúbico de areia à peça de madeira sob medida.</p>
+    <div class="grade">
+
+      <div class="card">
+        <h3>Areia</h3>
+        <ul>
+          <li>Areia fina</li>
+          <li>Areia grossa</li>
+          <li>Venda por metro cúbico</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Pedra</h3>
+        <ul>
+          <li>Pedra britada</li>
+          <li>Pedrisco</li>
+          <li>Carga fechada ou fracionada</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Madeira dura</h3>
+        <ul>
+          <li>Vigas 5×11 e 5×15</li>
+          <li>Caibros 5×5</li>
+          <li>Tábuas 2,5 cm</li>
+          <li>Ripa e ripão</li>
+          <li>Estacas com ponta</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Pinus e caixaria</h3>
+        <ul>
+          <li>Tábua de caixa 10, 15, 20 e 30 cm</li>
+          <li>Forro de pinus</li>
+          <li>Meia cana</li>
+          <li>Maderite</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Acabamento</h3>
+        <ul>
+          <li>Portas e batentes</li>
+          <li>Guarnição de angelim</li>
+          <li>Mata-junta</li>
+          <li>Fechaduras e dobradiças</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Ferragens</h3>
+        <ul>
+          <li>Pregos</li>
+          <li>Parafusos</li>
+          <li>Material miúdo de obra</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="local">
+  <div class="miolo">
+    <h2>Onde estamos</h2>
+    <p class="sub">Passa no pátio ou chama no WhatsApp que a gente resolve.</p>
+    <div class="colunas">
+      <div>
+        <div class="dado">
+          <b>Endereço</b>
+          <a href="https://www.google.com/maps/search/?api=1&query=Av.+Amambai,+815,+Centro,+Navira%C3%AD+-+MS,+79947-227" target="_blank" rel="noopener">
+            Av. Amambai, 815 (fundos) — Centro<br>Naviraí/MS · CEP 79947-227
+          </a>
+        </div>
+        <div class="dado">
+          <b>WhatsApp e telefone</b>
+          <a href="https://wa.me/5567999245253">(67) 9 9924-5253</a>
+        </div>
+        <div class="dado">
+          <b>Razão social</b>
+          E.G. de Lima Material de Construção — ME<br>CNPJ 15.616.179/0001-83
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-top-color:#25D366">
+          <h3>Peça seu orçamento</h3>
+          <p style="color:var(--texto-suave);margin:0 0 16px">
+            Manda a lista do que precisa e a gente responde com preço e prazo de entrega.
+          </p>
+          <a class="botao zap" style="display:block;text-align:center"
+             href="https://wa.me/5567999245253?text=Ol%C3%A1!%20Preciso%20de%20um%20or%C3%A7amento%3A%20">
+            Chamar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="equipe">
+  <div class="miolo">
+    <h2>Acesso da equipe</h2>
+    <p>Área restrita aos donos e funcionários da Goes: vendas, caixa, fiado,
+       cheques, estoque e ordens de carregamento. Entra com e-mail e senha.</p>
+    <a class="botao painel" href="painel/">Entrar no sistema</a>
+  </div>
+</section>
+
+<footer>
+  <div class="miolo">
+    <div>
+      <strong style="color:#fff">GOES Pedras e Areia</strong><br>
+      Av. Amambai, 815 (fundos) — Centro — Naviraí/MS
+    </div>
+    <div>
+      <a href="https://wa.me/5567999245253">(67) 99924-5253</a><br>
+      <a href="painel/">Entrar no sistema</a>
+    </div>
+  </div>
+</footer>
+
+<a class="zap-flutua" href="https://wa.me/5567999245253" aria-label="Falar no WhatsApp">💬</a>
+
+</body>
+</html>
